@@ -13,7 +13,7 @@ const userSchema = new Schema(
     }
   },
   {
-    timeStamps: true // automatically creates a field for time which says when it is modified or created
+    timestamps: true // automatically creates a field for time which says when it is modified or created
   }
 );
 

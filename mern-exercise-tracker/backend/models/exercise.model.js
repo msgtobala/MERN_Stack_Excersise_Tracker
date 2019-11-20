@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const excerciseSchema = new Schema(
+const exerciseSchema = new Schema(
   {
     username: { type: String, required: true },
     description: { type: String, required: true },
@@ -10,10 +10,10 @@ const excerciseSchema = new Schema(
     date: { type: Date, required: true }
   },
   {
-    timeStamps: true
+    timestamps: true // automatically creates a field for time which says when it is modified or created
   }
 );
 
-const Excercise = mongoose.model('Excercise', excerciseSchema);
+const Exercise = mongoose.model('Exercise', exerciseSchema);
 
-module.exports = Excercise;
+module.exports = Exercise;

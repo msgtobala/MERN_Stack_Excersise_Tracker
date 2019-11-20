@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+const exerciseRouter = require('./routes/exercise');
+const userRouter = require('./routes/users');
+
 require('dotenv').config();
 
 const app = express();
@@ -9,6 +12,8 @@ const port = process.env.port || 5000;
 
 app.use(cors());
 app.use(express.json());
+app.use('/exercies', exerciseRouter);
+app.use('/users', userRouter);
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, {

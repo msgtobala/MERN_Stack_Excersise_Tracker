@@ -12,7 +12,7 @@ const port = process.env.PORT || 5001;
 
 app.use(cors());
 app.use(express.json());
-app.use('/exercies', exerciseRouter);
+app.use('/exercises', exerciseRouter);
 app.use('/users', userRouter);
 
 const uri = process.env.ATLAS_URI;
